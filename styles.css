@@ -1,0 +1,293 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #CFCFB4; /* Soft Beige */
+    color: #173B4F;
+}
+
+/* Centered Page Layout */
+.page-container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    background: #264969; /* Deep Blue */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu .active, nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #B4CDE4; /* Light Blue */
+}
+
+.hero img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    color: #505033;
+}
+
+/* Sections */
+section {
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.about-section {
+    background: #CFCFB4; /* Soft Beige */
+    text-align: center;
+    padding: 40px;
+    max-width: 800px; /* Keeps content centered */
+    margin: 20px auto; /* Centers the section */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h1, 
+.about-section h2 {
+    color: #264969; /* Deep Blue for contrast */
+    margin-bottom: 15px;
+}
+
+.about-section p, 
+.about-section ul, 
+.about-section blockquote {
+    max-width: 600px; /* Ensures readable line length */
+    text-align: center;
+    line-height: 1.6;
+}
+
+.about-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-section ul li {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Styling for Testimonials */
+.testimonials {
+    background: #B4CDE4; /* Light Blue */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 700px;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    font-size: 18px;
+    color: #173B4F;
+    margin: 10px 0;
+}
+
+/* Trip Cards */
+.trip-card {
+    background-color: #B4CDE4;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.trip-card img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+    background: #B4CDE4;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background: #264969;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background: #505033;
+}
+
+/* Social Media */
+.social-media {
+    background: #B4CDE4;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 10px;
+    color: #264969;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* History Section */
+.history {
+    margin-top: 20px;
+    padding: 20px;
+    background: #B4CDE4; /* Light Blue */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history h2 {
+    color: #264969; /* Deep Blue */
+    margin-bottom: 15px;
+}
+
+.history p {
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Team Section */
+.team {
+    margin-top: 20px;
+    padding: 20px;
+    background: #B4CDE4; /* Light Blue */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team h2 {
+    color: #264969; /* Deep Blue */
+    margin-bottom: 15px;
+}
+
+.team p {
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.team ul {
+    list-style: none;
+    padding: 0;
+}
+
+.team ul li {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Mission Section */
+.mission {
+    margin-top: 20px;
+    padding: 20px;
+    background: #B4CDE4; /* Light Blue */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mission h2 {
+    color: #264969; /* Deep Blue */
+    margin-bottom: 15px;
+}
+
+.mission p {
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #264969;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+}
