@@ -8,7 +8,17 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #CFCFB4; /* Soft Beige */
-    color: #173B4F;
+    color: #173b4f; /* Change text color to #173b4f */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow */
+}
+
+:root {
+    --primary-color: #604a37; /* Primary Color */
+    --secondary-color: #2c414e; /* Secondary Color */
+    --accent1-color: #9c7756; /* Accent 1 Color */
+    --accent2-color: #173b4f; /* Accent 2 Color */
+    --text-color: #6F90B2; /* Text Color */
+    --background-color: #fff;
 }
 
 /* Centered Page Layout */
@@ -23,7 +33,7 @@ body {
 
 /* Header */
 header {
-    background: #264969; /* Deep Blue */
+    background: var(--secondary-color); /* Use Secondary Color */
     color: white;
     text-align: center;
     padding: 20px;
@@ -56,7 +66,8 @@ header {
 .hero {
     text-align: center;
     padding: 50px;
-    background-color: #B4CDE4; /* Light Blue */
+    background-color: var(--accent2-color); /* Use Accent 2 Color */
+    position: relative;
 }
 
 .hero img {
@@ -70,7 +81,29 @@ header {
 .hero h1 {
     font-family: 'Georgia', serif;
     font-weight: 700;
-    color: #505033;
+    color: var(--primary-color); /* Use Primary Color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+}
+
+.hero article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero article img {
+    float: right;
+}
+
+.hero article p {
+    color: white; /* Change text color to white */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow */
+    margin: 0 auto 0 20px; /* Move text slightly to the right */
 }
 
 /* Sections */
@@ -95,16 +128,18 @@ section {
 
 .about-section h1, 
 .about-section h2 {
-    color: #264969; /* Deep Blue for contrast */
+    color: #173b4f; /* Change text color to #173b4f */
     margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow */
 }
 
 .about-section p, 
 .about-section ul, 
 .about-section blockquote {
     max-width: 600px; /* Ensures readable line length */
-    text-align: center;
+    text-align: center; /* Center the text */
     line-height: 1.6;
+    margin: 0 auto 0 20px; /* Move text slightly to the right */
 }
 
 .about-section ul {
@@ -119,23 +154,27 @@ section {
 
 /* Styling for Testimonials */
 .testimonials {
-    background: #B4CDE4; /* Light Blue */
+    background: var(--accent2-color); /* Use Accent 2 Color */
     padding: 20px;
     margin: 20px auto;
     border-radius: 8px;
     max-width: 700px;
+    color: white; /* Change text color to white */
 }
 
 .testimonials blockquote {
     font-style: italic;
     font-size: 18px;
-    color: #173B4F;
+    color: white; /* Change text color to white */
     margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow */
+    text-align: center; /* Center the text */
+    margin: 0 auto 0 20px; /* Move text slightly to the right */
 }
 
 /* Trip Cards */
 .trip-card {
-    background-color: #B4CDE4;
+    background-color: var(--accent2-color); /* Use Accent 2 Color */
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
@@ -152,7 +191,7 @@ section {
 
 /* Contact Form */
 .contact-form {
-    background: #B4CDE4;
+    background: var(--accent2-color); /* Use Accent 2 Color */
     padding: 20px;
     border-radius: 8px;
 }
@@ -170,7 +209,7 @@ input, textarea {
 }
 
 .submit-btn {
-    background: #264969;
+    background: var(--secondary-color); /* Use Secondary Color */
     color: white;
     padding: 12px 20px;
     border: none;
@@ -181,22 +220,23 @@ input, textarea {
 }
 
 .submit-btn:hover {
-    background: #505033;
+    background: var(--primary-color); /* Use Primary Color */
 }
 
 /* Social Media */
 .social-media {
-    background: #B4CDE4;
+    background: var(--accent2-color); /* Use Accent 2 Color */
     text-align: center;
     padding: 20px;
     border-radius: 8px;
     margin-top: 20px;
+    color: white; /* Change text color to white */
 }
 
 .social-media a {
     display: inline-block;
     margin: 10px;
-    color: #264969;
+    color: var(--secondary-color); /* Use Secondary Color */
     font-weight: bold;
     text-decoration: none;
 }
@@ -205,52 +245,72 @@ input, textarea {
     text-decoration: underline;
 }
 
+.social-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    display: flex; /* Display list items inline */
+    justify-content: center; /* Center the icons */
+    gap: 10px; /* Add spacing between icons */
+}
+
 .social-links a {
     display: inline-block;
     margin: 10px;
     color: #333;
     text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 30px; /* Set a fixed width */
+    height: 30px; /* Set a fixed height */
+    margin: 5px; /* Add some spacing around the icons */
 }
 
 /* History Section */
 .history {
     margin-top: 20px;
     padding: 20px;
-    background: #B4CDE4; /* Light Blue */
+    background: var(--accent2-color); /* Use Accent 2 Color */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .history h2 {
-    color: #264969; /* Deep Blue */
-    margin-bottom: 15px;
+    color: white; /* Change text color to white */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow */
 }
 
 .history p {
+    color: white; /* Change text color to white */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow */
     max-width: 600px;
-    text-align: center;
+    text-align: center; /* Center the text */
     line-height: 1.6;
+    margin: 0 auto 0 20px; /* Move text slightly to the right */
 }
 
 /* Team Section */
 .team {
     margin-top: 20px;
     padding: 20px;
-    background: #B4CDE4; /* Light Blue */
+    background: var(--accent2-color); /* Use Accent 2 Color */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .team h2 {
-    color: #264969; /* Deep Blue */
-    margin-bottom: 15px;
+    color: white; /* Change text color to white */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow */
 }
 
 .team p {
+    color: white; /* Change text color to white */
     max-width: 600px;
-    text-align: center;
+    text-align: center; /* Center the text */
     line-height: 1.6;
+    margin: 0 auto 0 20px; /* Move text slightly to the right */
 }
 
 .team ul {
@@ -261,33 +321,58 @@ input, textarea {
 .team ul li {
     font-weight: bold;
     margin: 5px 0;
+    color: white; /* Change text color to white */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow */
+    text-align: center; /* Center the text */
+    margin: 0 auto 0 20px; /* Move text slightly to the right */
 }
 
 /* Mission Section */
 .mission {
     margin-top: 20px;
     padding: 20px;
-    background: #B4CDE4; /* Light Blue */
+    background: var(--accent2-color); /* Use Accent 2 Color */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .mission h2 {
-    color: #264969; /* Deep Blue */
-    margin-bottom: 15px;
+    color: white; /* Change text color to white */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow */
 }
 
 .mission p {
+    color: white; /* Change text color to white */
     max-width: 600px;
-    text-align: center;
+    text-align: center; /* Center the text */
     line-height: 1.6;
+    margin: 0 auto 0 20px; /* Move text slightly to the right */
+}
+
+/* Adventure Images */
+.adventure-images {
+    display: flex; /* Use Flexbox to arrange images in a row */
+    justify-content: center; /* Center the images */
+    gap: 10px; /* Add spacing between images */
+}
+
+.adventure img {
+    width: 100%;
+    max-width: 250px; /* Increase the fixed width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Add some spacing between images */
+    border-radius: 5px; /* Optional: Add rounded corners */
 }
 
 /* Footer */
 footer {
     text-align: center;
-    background: #264969;
+    background: var(--secondary-color); /* Use Secondary Color */
     color: white;
     padding: 15px;
     margin-top: 40px;
+}
+
+.right-align {
+    text-align: right;
 }
